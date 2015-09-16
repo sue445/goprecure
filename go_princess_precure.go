@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package go_princess_precure
 
 type Girl struct {
 	girl_name     string
@@ -24,7 +22,7 @@ func (g *Girl) name() string {
 
 func (g *Girl) transform() {
 	g.current_state++
-	if(g.current_state > 1){
+	if g.current_state > 1 {
 		g.current_state = 0
 	}
 }
@@ -41,13 +39,13 @@ func newCureFlora() *Girl {
 	return g
 }
 
-func main() {
-	flora := newCureFlora()
-	fmt.Println(flora)
-
-	fmt.Println(flora.name())
-
-	flora.transform()
-
-	fmt.Println(flora.name())
-}
+//func main() {
+//	flora := newCureFlora()
+//	fmt.Println(flora)
+//
+//	fmt.Println(flora.name())
+//
+//	flora.transform()
+//
+//	fmt.Println(flora.name())
+//}
