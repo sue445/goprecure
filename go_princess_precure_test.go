@@ -23,3 +23,21 @@ func TestTransform(t *testing.T) {
 
 	AssertEquals("春野はるか", flora.name(), t)
 }
+
+func TestHumanize(t *testing.T) {
+	flora := newCureFlora()
+
+	AssertEquals("春野はるか", flora.name(), t)
+
+	flora.humanize()
+
+	AssertEquals("春野はるか", flora.name(), t)
+
+	flora.transform()
+
+	AssertEquals("キュアフローラ", flora.name(), t)
+
+	flora.humanize()
+
+	AssertEquals("春野はるか", flora.name(), t)
+}

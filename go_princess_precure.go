@@ -27,6 +27,10 @@ func (g *Girl) transform() {
 	}
 }
 
+func (g *Girl) humanize() {
+	g.current_state = 0
+}
+
 func newCureFlora() *Girl {
 	g := new(Girl)
 	g.girl_name = "cure_flora"
