@@ -42,14 +42,3 @@ func newCureFlora() *Girl {
 	g.current_state = 0
 	return g
 }
-
-//func main() {
-//	flora := newCureFlora()
-//	fmt.Println(flora)
-//
-//	fmt.Println(flora.name())
-//
-//	flora.transform()
-//
-//	fmt.Println(flora.name())
-//}
