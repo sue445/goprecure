@@ -4,40 +4,40 @@ import (
 	"testing"
 )
 
-func AssertEquals(expect interface{}, actual interface{}, t *testing.T) {
-	if expect != actual {
-		t.Errorf("%s != %s", expect, actual)
-	}
-}
-
 func TestTransform(t *testing.T) {
 	flora := newCureFlora()
 
-	AssertEquals("春野はるか", flora.name(), t)
+	if flora.name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	}
 
 	flora.transform()
 
-	AssertEquals("キュアフローラ", flora.name(), t)
+	if flora.name() != "キュアフローラ" {
+		t.Errorf("actual=%s, expect=%s", flora.name(), "キュアフローラ")
+	}
 
 	flora.transform()
 
-	AssertEquals("春野はるか", flora.name(), t)
+	if flora.name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	}
 }
 
 func TestHumanize(t *testing.T) {
 	flora := newCureFlora()
 
-	AssertEquals("春野はるか", flora.name(), t)
-
 	flora.humanize()
 
-	AssertEquals("春野はるか", flora.name(), t)
+	if flora.name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	}
 
 	flora.transform()
 
-	AssertEquals("キュアフローラ", flora.name(), t)
-
 	flora.humanize()
 
-	AssertEquals("春野はるか", flora.name(), t)
+	if flora.name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	}
 }
