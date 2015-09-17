@@ -22,6 +22,9 @@ func (g *Girl) name() string {
 
 func (g *Girl) transform() {
 	g.current_state++
+
+	// TODO: メッセージを1行ずつ出す
+
 	if g.current_state > 1 {
 		g.current_state = 0
 	}
