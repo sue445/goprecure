@@ -43,7 +43,7 @@ func TestHumanize(t *testing.T) {
 	}
 }
 
-func ExampleTransform() {
+func ExampleCureFlora() {
 	flora := newCureFlora()
 
 	// human
@@ -57,4 +57,52 @@ func ExampleTransform() {
 	// Output:
 	// 春野はるか
 	// キュアフローラ
+}
+
+func ExampleCureMermaid() {
+	mermaid := newCureMermaid()
+
+	// human
+	fmt.Println(mermaid.name())
+
+	mermaid.transform()
+
+	// precure
+	fmt.Println(mermaid.name())
+
+	// Output:
+	// 海藤みなみ
+	// キュアマーメイド
+}
+
+func ExampleCureTwinkle() {
+	twinkle := newCureTwinkle()
+
+	// human
+	fmt.Println(twinkle.name())
+
+	twinkle.transform()
+
+	// precure
+	fmt.Println(twinkle.name())
+
+	// Output:
+	// 天ノ川きらら
+	// キュアトゥインクル
+}
+
+func ExampleCureScarlett() {
+	scarlett := newCureScarlett()
+
+	// human
+	fmt.Println(scarlett.name())
+
+	scarlett.transform()
+
+	// precure
+	fmt.Println(scarlett.name())
+
+	// Output:
+	// 紅城トワ
+	// キュアスカーレット
 }
