@@ -1,12 +1,13 @@
 package go_princess_precure
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestTransform(t *testing.T) {
 	flora := newCureFlora()
+	flora.transform_interval = 0
 
 	if flora.name() != "春野はるか" {
 		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
@@ -27,6 +28,7 @@ func TestTransform(t *testing.T) {
 
 func TestHumanize(t *testing.T) {
 	flora := newCureFlora()
+	flora.transform_interval = 0
 
 	flora.humanize()
 
@@ -45,6 +47,7 @@ func TestHumanize(t *testing.T) {
 
 func ExampleCureFlora() {
 	flora := newCureFlora()
+	flora.transform_interval = 0
 
 	// human
 	fmt.Println(flora.name())
@@ -56,11 +59,18 @@ func ExampleCureFlora() {
 
 	// Output:
 	// 春野はるか
+	// プリキュア！プリンセスエンゲージ！
+	// 咲き誇る花のプリンセス！キュアフローラ！
+	// 強く、やさしく、美しく！
+	// Go!プリンセスプリキュア！
+	// 冷たい檻に閉ざされた夢、返していただきますわ！
+	// お覚悟はよろしくて？
 	// キュアフローラ
 }
 
 func ExampleCureMermaid() {
 	mermaid := newCureMermaid()
+	mermaid.transform_interval = 0
 
 	// human
 	fmt.Println(mermaid.name())
@@ -72,11 +82,18 @@ func ExampleCureMermaid() {
 
 	// Output:
 	// 海藤みなみ
+	// プリキュア！プリンセスエンゲージ！
+	// 澄み渡る海のプリンセス！キュアマーメイド！
+	// 強く、やさしく、美しく！
+	// Go!プリンセスプリキュア！
+	// 冷たい檻に閉ざされた夢、返していただきますわ！
+	// お覚悟はよろしくて？
 	// キュアマーメイド
 }
 
 func ExampleCureTwinkle() {
 	twinkle := newCureTwinkle()
+	twinkle.transform_interval = 0
 
 	// human
 	fmt.Println(twinkle.name())
@@ -88,11 +105,18 @@ func ExampleCureTwinkle() {
 
 	// Output:
 	// 天ノ川きらら
+	// プリキュア！プリンセスエンゲージ！
+	// きらめく星のプリンセス！キュアトゥインクル！
+	// 強く、やさしく、美しく！
+	// Go!プリンセスプリキュア！
+	// 冷たい檻に閉ざされた夢、返していただきますわ！
+	// お覚悟はよろしくて？
 	// キュアトゥインクル
 }
 
 func ExampleCureScarlett() {
 	scarlett := newCureScarlett()
+	scarlett.transform_interval = 0
 
 	// human
 	fmt.Println(scarlett.name())
@@ -104,5 +128,11 @@ func ExampleCureScarlett() {
 
 	// Output:
 	// 紅城トワ
+	// プリキュア！プリンセスエンゲージ！
+	// 深紅の炎のプリンセス！キュアスカーレット！
+	// 強く、やさしく、美しく！
+	// Go!プリンセスプリキュア！
+	// 冷たい檻に閉ざされた夢、返していただきますわ！
+	// お覚悟決めなさい！
 	// キュアスカーレット
 }

@@ -1,13 +1,25 @@
 package go_princess_precure
 
+import (
+	"fmt"
+	"strings"
+	"time"
+)
+
+const (
+	DefaultIntervalSec = 1
+)
+
 type Girl struct {
-	girl_name     string
-	human_name    string
-	precure_name  string
-	cast_name     string
-	color         string
-	created_date  string
-	current_state int
+	girl_name          string
+	human_name         string
+	precure_name       string
+	cast_name          string
+	color              string
+	created_date       string
+	current_state      int
+	transform_interval time.Duration
+	transform_messages map[string]string
 }
 
 func (g *Girl) name() string {
@@ -21,12 +33,20 @@ func (g *Girl) name() string {
 }
 
 func (g *Girl) transform() {
-	g.current_state++
+	g.printByLine(g.transform_messages["normal"])
 
-	// TODO: メッセージを1行ずつ出す
+	g.current_state++
 
 	if g.current_state > 1 {
 		g.current_state = 0
+	}
+}
+
+func (g *Girl) printByLine(message string) {
+	for _, line := range strings.Split(message, "\n") {
+		line = strings.TrimSpace(line)
+		fmt.Println(line)
+		time.Sleep(g.transform_interval)
 	}
 }
 
@@ -43,6 +63,18 @@ func newCureFlora() *Girl {
 	g.color = "pink"
 	g.created_date = "2015-02-01"
 	g.current_state = 0
+	g.transform_interval = DefaultIntervalSec * time.Second
+
+	g.transform_messages = map[string]string{
+		"normal": `プリキュア！プリンセスエンゲージ！
+咲き誇る花のプリンセス！キュアフローラ！
+強く、やさしく、美しく！
+Go!プリンセスプリキュア！
+冷たい檻に閉ざされた夢、返していただきますわ！
+お覚悟はよろしくて？`,
+		"exchange": `エクスチェンジ！モードエレガント！`,
+	}
+
 	return g
 }
 
@@ -55,6 +87,19 @@ func newCureMermaid() *Girl {
 	g.color = "blue"
 	g.created_date = "2015-02-08"
 	g.current_state = 0
+	g.transform_interval = DefaultIntervalSec * time.Second
+
+	g.transform_messages = map[string]string{
+		"normal": `プリキュア！プリンセスエンゲージ！
+澄み渡る海のプリンセス！キュアマーメイド！
+強く、やさしく、美しく！
+Go!プリンセスプリキュア！
+冷たい檻に閉ざされた夢、返していただきますわ！
+お覚悟はよろしくて？`,
+
+		"exchange": `エクスチェンジ！モードエレガント！`,
+	}
+
 	return g
 }
 
@@ -67,6 +112,19 @@ func newCureTwinkle() *Girl {
 	g.color = "yellow"
 	g.created_date = "2015-02-22"
 	g.current_state = 0
+	g.transform_interval = DefaultIntervalSec * time.Second
+
+	g.transform_messages = map[string]string{
+		"normal": `プリキュア！プリンセスエンゲージ！
+きらめく星のプリンセス！キュアトゥインクル！
+強く、やさしく、美しく！
+Go!プリンセスプリキュア！
+冷たい檻に閉ざされた夢、返していただきますわ！
+お覚悟はよろしくて？`,
+
+		"exchange": `エクスチェンジ！モードエレガント！`,
+	}
+
 	return g
 }
 
@@ -79,5 +137,18 @@ func newCureScarlett() *Girl {
 	g.color = "red"
 	g.created_date = "2015-07-05"
 	g.current_state = 0
+	g.transform_interval = DefaultIntervalSec * time.Second
+
+	g.transform_messages = map[string]string{
+		"normal": `プリキュア！プリンセスエンゲージ！
+深紅の炎のプリンセス！キュアスカーレット！
+強く、やさしく、美しく！
+Go!プリンセスプリキュア！
+冷たい檻に閉ざされた夢、返していただきますわ！
+お覚悟決めなさい！`,
+
+		"exchange": `エクスチェンジ！モードエレガント！`,
+	}
+
 	return g
 }
