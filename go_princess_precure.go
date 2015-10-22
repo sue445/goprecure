@@ -37,7 +37,7 @@ func exchangeMessage(k DressupKey) string {
 ごきげんよう`
 
 	}
-	panic(fmt.Sprintf("Unknown DressUpKey: %d", k))
+	panic(fmt.Sprintf("Unknown DressUpKey: ", k.String()))
 }
 
 type Girl struct {
@@ -50,7 +50,7 @@ type Girl struct {
 	current_state      int
 	transform_interval time.Duration
 	transform_messages map[string]string
-	dressup_keys		[]DressupKey
+	dressup_keys       []DressupKey
 }
 
 func (g *Girl) name() string {
@@ -90,21 +90,24 @@ func (g *Girl) exchange(k DressupKey) {
 		panic("Human can not exchange!")
 	}
 
+	if !g.canUseKey(k) {
+		panic(g.precure_name + " can not use " + k.String())
+	}
+
 	g.current_state = 2
 
 	var message = exchangeMessage(k)
 	g.printByLine(message)
 }
 
-func (g *Girl) canUseKey(k DressupKey) bool{
+func (g *Girl) canUseKey(k DressupKey) bool {
 	for _, value := range g.dressup_keys {
-		if (value == k){
+		if value == k {
 			return true
 		}
 	}
 	return false
 }
-
 
 func newCureFlora() *Girl {
 	g := new(Girl)
