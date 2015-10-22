@@ -136,3 +136,28 @@ func ExampleCureScarlett() {
 	// お覚悟決めなさい！
 	// キュアスカーレット
 }
+
+func TestExchange(t *testing.T) {
+	flora := newCureFlora()
+	flora.transform_interval = 0
+
+	flora.transform()
+
+	flora.exchange(TransformFlora)
+}
+
+func TestCanUseKey(t *testing.T) {
+	flora := newCureFlora()
+
+	actual := flora.canUseKey(TransformFlora)
+
+	if !actual {
+		t.Errorf("expect flora.canUseKey(TransformFlora) == true")
+	}
+
+	actual = flora.canUseKey(TransformMermaid)
+
+	if actual {
+		t.Errorf("expect flora.canUseKey(TransformMermaid) == false")
+	}
+}

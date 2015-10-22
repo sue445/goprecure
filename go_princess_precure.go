@@ -10,6 +10,36 @@ const (
 	DefaultIntervalSec = 1
 )
 
+type DressupKey int
+
+const (
+	TransformFlora DressupKey = iota
+	TransformMermaid
+	TransformTwinkle
+	TransformScarlett
+)
+
+func exchangeMessage(k DressupKey) string {
+	switch k {
+	case TransformFlora:
+		return `エクスチェンジ！モードエレガント！
+舞え、花よ！プリキュア・フローラル・トルビヨン！
+ごきげんよう`
+
+	case TransformMermaid:
+		return `エクスチェンジ！モードエレガント！
+高鳴れ、海よ！プリキュア・マーメイド・リップル！
+ごきげんよう`
+
+	case TransformTwinkle:
+		return `エクスチェンジ！モードエレガント！
+キラキラ、星よ！プリキュア・トゥインクル・ハミング！
+ごきげんよう`
+
+	}
+	panic(fmt.Sprintf("Unknown DressUpKey: %d", k))
+}
+
 type Girl struct {
 	girl_name          string
 	human_name         string
@@ -20,6 +50,7 @@ type Girl struct {
 	current_state      int
 	transform_interval time.Duration
 	transform_messages map[string]string
+	dressup_keys		[]DressupKey
 }
 
 func (g *Girl) name() string {
@@ -54,6 +85,27 @@ func (g *Girl) humanize() {
 	g.current_state = 0
 }
 
+func (g *Girl) exchange(k DressupKey) {
+	if g.current_state == 0 {
+		panic("Human can not exchange!")
+	}
+
+	g.current_state = 2
+
+	var message = exchangeMessage(k)
+	g.printByLine(message)
+}
+
+func (g *Girl) canUseKey(k DressupKey) bool{
+	for _, value := range g.dressup_keys {
+		if (value == k){
+			return true
+		}
+	}
+	return false
+}
+
+
 func newCureFlora() *Girl {
 	g := new(Girl)
 	g.girl_name = "cure_flora"
@@ -72,8 +124,9 @@ func newCureFlora() *Girl {
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
 お覚悟はよろしくて？`,
-		"exchange": `エクスチェンジ！モードエレガント！`,
 	}
+
+	g.dressup_keys = []DressupKey{TransformFlora}
 
 	return g
 }
@@ -96,9 +149,9 @@ func newCureMermaid() *Girl {
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
 お覚悟はよろしくて？`,
-
-		"exchange": `エクスチェンジ！モードエレガント！`,
 	}
+
+	g.dressup_keys = []DressupKey{TransformMermaid}
 
 	return g
 }
@@ -121,9 +174,9 @@ func newCureTwinkle() *Girl {
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
 お覚悟はよろしくて？`,
-
-		"exchange": `エクスチェンジ！モードエレガント！`,
 	}
+
+	g.dressup_keys = []DressupKey{TransformTwinkle}
 
 	return g
 }
@@ -146,9 +199,9 @@ func newCureScarlett() *Girl {
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
 お覚悟決めなさい！`,
-
-		"exchange": `エクスチェンジ！モードエレガント！`,
 	}
+
+	g.dressup_keys = []DressupKey{TransformScarlett}
 
 	return g
 }
