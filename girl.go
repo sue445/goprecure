@@ -60,8 +60,9 @@ func (g *Girl) printByLine(message string) {
 	}
 }
 
-func (g *Girl) Humanize() {
+func (g *Girl) Humanize() *Girl {
 	g.currentState = 0
+	return g
 }
 
 func (g *Girl) Exchange(k DressupKey) (*Girl, error) {
