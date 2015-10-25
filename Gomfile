@@ -1,0 +1,6 @@
+group :development do
+  gom "github.com/motemen/gore"
+  gom "github.com/nsf/gocode"
+  gom "github.com/k0kubun/pp"
+  gom "golang.org/x/tools/cmd/godoc"
+end
