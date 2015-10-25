@@ -94,7 +94,7 @@ func NewCureFlora() *Girl {
 	g.cast_name = "嶋村侑"
 	g.color = "pink"
 	g.created_date = "2015-02-01"
-	g.dressup_keys = []DressupKey{TransformFlora}
+	g.dressup_keys = []DressupKey{TransformFlora, Rose, Lily, Blossom}
 
 	g.transform_message = `プリキュア！プリンセスエンゲージ！
 咲き誇る花のプリンセス！キュアフローラ！
@@ -114,7 +114,7 @@ func NewCureMermaid() *Girl {
 	g.cast_name = "浅野真澄"
 	g.color = "blue"
 	g.created_date = "2015-02-08"
-	g.dressup_keys = []DressupKey{TransformMermaid}
+	g.dressup_keys = []DressupKey{TransformMermaid, Ice, Bobble, Coral}
 
 	g.transform_message = `プリキュア！プリンセスエンゲージ！
 澄み渡る海のプリンセス！キュアマーメイド！
@@ -134,7 +134,7 @@ func NewCureTwinkle() *Girl {
 	g.cast_name = "山村響"
 	g.color = "yellow"
 	g.created_date = "2015-02-22"
-	g.dressup_keys = []DressupKey{TransformTwinkle}
+	g.dressup_keys = []DressupKey{TransformTwinkle, Luna, ShootingStar, Galaxy}
 
 	g.transform_message = `プリキュア！プリンセスエンゲージ！
 きらめく星のプリンセス！キュアトゥインクル！
@@ -154,7 +154,7 @@ func NewCureScarlett() *Girl {
 	g.cast_name = "沢城みゆき"
 	g.color = "red"
 	g.created_date = "2015-07-05"
-	g.dressup_keys = []DressupKey{TransformScarlett}
+	g.dressup_keys = []DressupKey{TransformScarlett, Fireworks, Phoenix, Sun}
 
 	g.transform_message = `プリキュア！プリンセスエンゲージ！
 深紅の炎のプリンセス！キュアスカーレット！
