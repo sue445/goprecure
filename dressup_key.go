@@ -7,22 +7,22 @@ import (
 type DressupKey int
 
 const (
-	TransformFlora    DressupKey = iota // 変身ドレスアップキー（フローラ）
-	TransformMermaid                    // 変身ドレスアップキー（マーメイド）
-	TransformTwinkle                    // 変身ドレスアップキー（トゥインクル）
-	TransformScarlett                   // 変身ドレスアップキー（スカーレット）
-	Rose                                // ローズ
-	Ice                                 // アイス
-	Luna                                // ルナ
-	Fireworks                           // 花火
-	Lily                                // リリィ
-	Bobble                              // バブル
-	ShootingStar                        // シューティングスター
-	Phoenix                             // フェニックス
-	Blossom                             // 桜
-	Coral                               // 珊瑚
-	Galaxy                              // 銀河
-	Sun                                 // サン
+	TransformFlora    DressupKey = iota // 変身ドレスアップキー（キュアフローラ）
+	TransformMermaid                    // 変身ドレスアップキー（キュアマーメイド）
+	TransformTwinkle                    // 変身ドレスアップキー（キュアトゥインクル）
+	TransformScarlett                   // 変身ドレスアップキー（キュアスカーレット）
+	Rose                                // エレガントローズドレスアップキー
+	Ice                                 // エレガントアイスドレスアップキー
+	Luna                                // エレガントルナドレスアップキー
+	Fireworks                           // エレガントハナビドレスアップキー
+	Lily                                // ミラクルリリィドレスアップキー
+	Bobble                              // ミラクルバブルドレスアップキー
+	ShootingStar                        // ミラクルシューティングスタードレスアップキー
+	Phoenix                             // ミラクルフェニックスドレスアップキー
+	Blossom                             // プレミアムサクラドレスアップキー
+	Coral                               // プレミアムサンゴドレスアップキー
+	Galaxy                              // プレミアムギンガドレスアップキー
+	Sun                                 // プレミアムサンドレスアップキー
 )
 
 func exchangeMessage(k DressupKey) string {
