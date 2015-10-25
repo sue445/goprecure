@@ -11,6 +11,18 @@ const (
 	TransformMermaid
 	TransformTwinkle
 	TransformScarlett
+	Rose			// ローズ
+	Ice				// アイス
+	Luna			// ルナ
+	Fireworks		// 花火
+	Lily			// リリィ
+	Bobble			// バブル
+	ShootingStar	// シューティングスター
+	Phoenix			// フェニックス
+	Blossom			// 桜
+	Coral			// 珊瑚
+	Galaxy			// 銀河
+	Sun				// サン
 )
 
 func exchangeMessage(k DressupKey) string {
@@ -30,6 +42,59 @@ func exchangeMessage(k DressupKey) string {
 キラキラ、星よ！プリキュア・トゥインクル・ハミング！
 ごきげんよう`
 
+	case TransformScarlett:
+		return `エクスチェンジ！モードエレガント！
+たぎれ、炎よ！プリキュア・スカーレット・フレイム！
+ごきげんよう`
+
+	case Rose:
+		return `ローズ！
+舞え、薔薇よ！プリキュア・ローズ・トルビヨン！
+ごきげんよう`
+
+	case Ice:
+		return `アイス！
+高鳴れ、氷よ！プリキュア・フローズン・リップル！
+ごきげんよう`
+
+	case Luna:
+		return `ルナ！
+キラキラ、月よ！プリキュア・フルムーン・ハミング！
+ごきげんよう`
+
+	case Lily:
+		return `リリィ！
+舞え、百合よ！プリキュア・リース・トルビヨン！
+ごきげんよう`
+
+	case Bobble:
+		return `バブル！
+高まれ、泡よ！プリキュア・バブルリップル！
+ごきげんよう`
+
+	case ShootingStar:
+		return `シューティングスター！
+キラキラ、流れ星よ！プリキュア・ミーティア・ハミング！
+ごきげんよう`
+
+	case Phoenix:
+		return `スカーレットバイオリン！フェニックス！
+羽ばたけ炎の翼！プリキュア・フェニックス・ブレイズ！
+ごきげんよう`
+
+	case Blossom:
+		fallthrough
+	case Coral:
+		fallthrough
+	case Galaxy:
+		fallthrough
+	case Sun:
+		return `モードエレガント！
+桜！珊瑚！銀河！サン！
+ドレスアッププレミアム！
+はぁッ！
+響け全ての力！プリキュアエクラエスポワール！`
 	}
+
 	panic(fmt.Sprintf("Unknown DressUpKey: %d", k))
 }

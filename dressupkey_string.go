@@ -4,9 +4,9 @@ package go_princess_precure
 
 import "fmt"
 
-const _DressupKey_name = "TransformFloraTransformMermaidTransformTwinkleTransformScarlett"
+const _DressupKey_name = "TransformFloraTransformMermaidTransformTwinkleTransformScarlettRoseIceLunaFireworksLilyBobbleShootingStarPhoenixBlossomCoralGalaxySun"
 
-var _DressupKey_index = [...]uint8{0, 14, 30, 46, 63}
+var _DressupKey_index = [...]uint8{0, 14, 30, 46, 63, 67, 70, 74, 83, 87, 93, 105, 112, 119, 124, 130, 133}
 
 func (i DressupKey) String() string {
 	if i < 0 || i >= DressupKey(len(_DressupKey_index)-1) {
