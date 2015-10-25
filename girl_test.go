@@ -92,22 +92,22 @@ func ExampleGirl_Humanize() {
 	flora.PrintLine = false
 
 	// human
-	fmt.Println("Name=" + flora.Name())
+	fmt.Println("Name", flora.Name())
 
 	flora.Transform()
 
 	// precure
-	fmt.Println("Name=" + flora.Name())
+	fmt.Println("Name", flora.Name())
 
 	flora.Humanize()
 
 	// human
-	fmt.Println("Name=" + flora.Name())
+	fmt.Println("Name", flora.Name())
 
 	// Output:
-	// Name=春野はるか
-	// Name=キュアフローラ
-	// Name=春野はるか
+	// Name 春野はるか
+	// Name キュアフローラ
+	// Name 春野はるか
 }
 
 func TestExchange(t *testing.T) {
