@@ -5,9 +5,27 @@ import (
 	"testing"
 )
 
+func ExampleGirl_Name() {
+	flora := NewCureFlora()
+	flora.PrintLine = false
+
+	// human
+	fmt.Println("Name", flora.Name())
+
+	flora.Transform()
+
+	// precure
+	fmt.Println("Name", flora.Name())
+
+	// Output:
+	// Name 春野はるか
+	// Name キュアフローラ
+}
+
 func TestTransform(t *testing.T) {
 	flora := NewCureFlora()
-	flora.transform_interval = 0
+	flora.PrintInterval = 0
+	flora.PrintLine = false
 
 	if flora.Name() != "春野はるか" {
 		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
@@ -26,122 +44,223 @@ func TestTransform(t *testing.T) {
 	}
 }
 
-func TestHumanize(t *testing.T) {
+func ExampleGirl_Transform() {
 	flora := NewCureFlora()
-	flora.transform_interval = 0
-
-	flora.Humanize()
-
-	if flora.Name() != "春野はるか" {
-		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
-	}
-
-	flora.Transform()
-
-	flora.Humanize()
-
-	if flora.Name() != "春野はるか" {
-		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
-	}
-}
-
-func ExampleCureFlora() {
-	flora := NewCureFlora()
-	flora.transform_interval = 0
+	flora.PrintInterval = 0
 
 	// human
-	fmt.Println(flora.Name())
+	fmt.Println("Name", flora.Name())
 
 	flora.Transform()
 
 	// precure
-	fmt.Println(flora.Name())
+	fmt.Println("Name", flora.Name())
 
 	// Output:
-	// 春野はるか
+	// Name 春野はるか
 	// プリキュア！プリンセスエンゲージ！
 	// 咲き誇る花のプリンセス！キュアフローラ！
 	// 強く、やさしく、美しく！
 	// Go!プリンセスプリキュア！
 	// 冷たい檻に閉ざされた夢、返していただきますわ！
 	// お覚悟はよろしくて？
-	// キュアフローラ
+	// Name キュアフローラ
 }
 
-func ExampleCureMermaid() {
-	mermaid := NewCureMermaid()
-	mermaid.transform_interval = 0
+func TestHumanize(t *testing.T) {
+	flora := NewCureFlora()
+	flora.PrintInterval = 0
+	flora.PrintLine = false
 
-	// human
-	fmt.Println(mermaid.Name())
+	flora.Humanize()
 
-	mermaid.Transform()
+	if flora.Name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
+	}
 
-	// precure
-	fmt.Println(mermaid.Name())
+	flora.Transform()
 
-	// Output:
-	// 海藤みなみ
-	// プリキュア！プリンセスエンゲージ！
-	// 澄み渡る海のプリンセス！キュアマーメイド！
-	// 強く、やさしく、美しく！
-	// Go!プリンセスプリキュア！
-	// 冷たい檻に閉ざされた夢、返していただきますわ！
-	// お覚悟はよろしくて？
-	// キュアマーメイド
+	flora.Humanize()
+
+	if flora.Name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
+	}
 }
 
-func ExampleCureTwinkle() {
-	twinkle := NewCureTwinkle()
-	twinkle.transform_interval = 0
+func ExampleGirl_Humanize() {
+	flora := NewCureFlora()
+	flora.PrintLine = false
 
 	// human
-	fmt.Println(twinkle.Name())
+	fmt.Println("Name=" + flora.Name())
 
-	twinkle.Transform()
+	flora.Transform()
 
 	// precure
-	fmt.Println(twinkle.Name())
+	fmt.Println("Name=" + flora.Name())
 
-	// Output:
-	// 天ノ川きらら
-	// プリキュア！プリンセスエンゲージ！
-	// きらめく星のプリンセス！キュアトゥインクル！
-	// 強く、やさしく、美しく！
-	// Go!プリンセスプリキュア！
-	// 冷たい檻に閉ざされた夢、返していただきますわ！
-	// お覚悟はよろしくて？
-	// キュアトゥインクル
-}
-
-func ExampleCureScarlett() {
-	scarlett := NewCureScarlett()
-	scarlett.transform_interval = 0
+	flora.Humanize()
 
 	// human
-	fmt.Println(scarlett.Name())
-
-	scarlett.Transform()
-
-	// precure
-	fmt.Println(scarlett.Name())
+	fmt.Println("Name=" + flora.Name())
 
 	// Output:
-	// 紅城トワ
-	// プリキュア！プリンセスエンゲージ！
-	// 深紅の炎のプリンセス！キュアスカーレット！
-	// 強く、やさしく、美しく！
-	// Go!プリンセスプリキュア！
-	// 冷たい檻に閉ざされた夢、返していただきますわ！
-	// お覚悟決めなさい！
-	// キュアスカーレット
+	// Name=春野はるか
+	// Name=キュアフローラ
+	// Name=春野はるか
 }
 
 func TestExchange(t *testing.T) {
 	flora := NewCureFlora()
-	flora.transform_interval = 0
+	flora.PrintLine = false
 
 	flora.Transform()
 
 	flora.Exchange(TransformFlora)
+}
+
+func ExampleGirl_Exchange_human() {
+	flora := NewCureFlora()
+
+	_, err := flora.Exchange(TransformFlora)
+	fmt.Println(err)
+
+	// Output:
+	// Human can not exchange!
+}
+
+func ExampleGirl_Exchange_precure() {
+	flora := NewCureFlora()
+	flora.PrintInterval = 0
+	flora.PrintLine = false
+
+	flora.Transform()
+
+	flora.PrintLine = true
+	flora.Exchange(TransformFlora)
+
+	// Output:
+	// エクスチェンジ！モードエレガント！
+	// 舞え、花よ！プリキュア・フローラル・トルビヨン！
+	// ごきげんよう
+}
+
+func ExampleGirl_Exchange_invalidDressupKey() {
+	flora := NewCureFlora()
+	flora.PrintInterval = 0
+	flora.PrintLine = false
+
+	flora.Transform()
+
+	_, err := flora.Exchange(TransformMermaid)
+	fmt.Println(err)
+
+	// Output:
+	// キュアフローラ can not use TransformMermaid
+}
+
+func TestCanUseKey(t *testing.T) {
+	flora := NewCureFlora()
+
+	actual := flora.CanUseKey(TransformFlora)
+
+	if !actual {
+		t.Errorf("expect flora.canUseKey(TransformFlora) == true")
+	}
+
+	actual = flora.CanUseKey(TransformMermaid)
+
+	if actual {
+		t.Errorf("expect flora.canUseKey(TransformMermaid) == false")
+	}
+}
+
+func ExampleGirl_CanUseKey() {
+	flora := NewCureFlora()
+
+	ret1 := flora.CanUseKey(TransformFlora)
+	fmt.Println("flora can use TransformFlora ?:", ret1)
+
+	ret2 := flora.CanUseKey(TransformMermaid)
+	fmt.Println("flora can use TransformMermaid ?:", ret2)
+
+	// Output:
+	// flora can use TransformFlora ?: true
+	// flora can use TransformMermaid ?: false
+}
+
+func ExampleNewCureFlora() {
+	flora := NewCureFlora()
+
+	fmt.Println("HumanName", flora.HumanName)
+	fmt.Println("PrecureName", flora.PrecureName)
+	fmt.Println("CastName", flora.CastName)
+	fmt.Println("Color", flora.Color)
+	fmt.Println("CreatedDate", flora.CreatedDate)
+	fmt.Println("DressupKeys", flora.DressupKeys)
+
+	// Output:
+	// HumanName 春野はるか
+	// PrecureName キュアフローラ
+	// CastName 嶋村侑
+	// Color pink
+	// CreatedDate 2015-02-01
+	// DressupKeys [TransformFlora Rose Lily Blossom]
+}
+
+func ExampleNewCureMermaid() {
+	mermaid := NewCureMermaid()
+
+	fmt.Println("HumanName", mermaid.HumanName)
+	fmt.Println("PrecureName", mermaid.PrecureName)
+	fmt.Println("CastName", mermaid.CastName)
+	fmt.Println("Color", mermaid.Color)
+	fmt.Println("CreatedDate", mermaid.CreatedDate)
+	fmt.Println("DressupKeys", mermaid.DressupKeys)
+
+	// Output:
+	// HumanName 海藤みなみ
+	// PrecureName キュアマーメイド
+	// CastName 浅野真澄
+	// Color blue
+	// CreatedDate 2015-02-08
+	// DressupKeys [TransformMermaid Ice Bobble Coral]
+}
+
+func ExampleNewCureTwinkle() {
+	twinkle := NewCureTwinkle()
+
+	fmt.Println("HumanName", twinkle.HumanName)
+	fmt.Println("PrecureName", twinkle.PrecureName)
+	fmt.Println("CastName", twinkle.CastName)
+	fmt.Println("Color", twinkle.Color)
+	fmt.Println("CreatedDate", twinkle.CreatedDate)
+	fmt.Println("DressupKeys", twinkle.DressupKeys)
+
+	// Output:
+	// HumanName 天ノ川きらら
+	// PrecureName キュアトゥインクル
+	// CastName 山村響
+	// Color yellow
+	// CreatedDate 2015-02-22
+	// DressupKeys [TransformTwinkle Luna ShootingStar Galaxy]
+}
+
+func ExampleNewCureScarlett() {
+	scarlett := NewCureScarlett()
+
+	fmt.Println("HumanName", scarlett.HumanName)
+	fmt.Println("PrecureName", scarlett.PrecureName)
+	fmt.Println("CastName", scarlett.CastName)
+	fmt.Println("Color", scarlett.Color)
+	fmt.Println("CreatedDate", scarlett.CreatedDate)
+	fmt.Println("DressupKeys", scarlett.DressupKeys)
+
+	// Output:
+	// HumanName 紅城トワ
+	// PrecureName キュアスカーレット
+	// CastName 沢城みゆき
+	// Color red
+	// CreatedDate 2015-07-05
+	// DressupKeys [TransformScarlett Fireworks Phoenix Sun]
 }

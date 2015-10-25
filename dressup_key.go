@@ -7,22 +7,22 @@ import (
 type DressupKey int
 
 const (
-	TransformFlora DressupKey = iota
-	TransformMermaid
-	TransformTwinkle
-	TransformScarlett
-	Rose			// ローズ
-	Ice				// アイス
-	Luna			// ルナ
-	Fireworks		// 花火
-	Lily			// リリィ
-	Bobble			// バブル
-	ShootingStar	// シューティングスター
-	Phoenix			// フェニックス
-	Blossom			// 桜
-	Coral			// 珊瑚
-	Galaxy			// 銀河
-	Sun				// サン
+	TransformFlora    DressupKey = iota // 変身ドレスアップキー（フローラ）
+	TransformMermaid                    // 変身ドレスアップキー（マーメイド）
+	TransformTwinkle                    // 変身ドレスアップキー（トゥインクル）
+	TransformScarlett                   // 変身ドレスアップキー（スカーレット）
+	Rose                                // ローズ
+	Ice                                 // アイス
+	Luna                                // ルナ
+	Fireworks                           // 花火
+	Lily                                // リリィ
+	Bobble                              // バブル
+	ShootingStar                        // シューティングスター
+	Phoenix                             // フェニックス
+	Blossom                             // 桜
+	Coral                               // 珊瑚
+	Galaxy                              // 銀河
+	Sun                                 // サン
 )
 
 func exchangeMessage(k DressupKey) string {
@@ -60,6 +60,11 @@ func exchangeMessage(k DressupKey) string {
 	case Luna:
 		return `ルナ！
 キラキラ、月よ！プリキュア・フルムーン・ハミング！
+ごきげんよう`
+
+	case Fireworks:
+		return `花火！
+燃えよ、炎よ！プリキュア・スカーレット・スパーク！
 ごきげんよう`
 
 	case Lily:
