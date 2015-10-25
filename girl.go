@@ -19,7 +19,7 @@ type Girl struct {
 	created_date       string
 	current_state      int
 	transform_interval time.Duration
-	transform_messages map[string]string
+	transform_message  string
 	dressup_keys       []DressupKey
 }
 
@@ -34,7 +34,7 @@ func (g *Girl) Name() string {
 }
 
 func (g *Girl) Transform() {
-	g.printByLine(g.transform_messages["normal"])
+	g.printByLine(g.transform_message)
 
 	g.current_state++
 
@@ -95,14 +95,12 @@ func NewCureFlora() *Girl {
 	g.color = "pink"
 	g.created_date = "2015-02-01"
 
-	g.transform_messages = map[string]string{
-		"normal": `プリキュア！プリンセスエンゲージ！
+	g.transform_message = `プリキュア！プリンセスエンゲージ！
 咲き誇る花のプリンセス！キュアフローラ！
 強く、やさしく、美しく！
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
-お覚悟はよろしくて？`,
-	}
+お覚悟はよろしくて？`
 
 	g.dressup_keys = []DressupKey{TransformFlora}
 
@@ -118,14 +116,12 @@ func NewCureMermaid() *Girl {
 	g.color = "blue"
 	g.created_date = "2015-02-08"
 
-	g.transform_messages = map[string]string{
-		"normal": `プリキュア！プリンセスエンゲージ！
+	g.transform_message = `プリキュア！プリンセスエンゲージ！
 澄み渡る海のプリンセス！キュアマーメイド！
 強く、やさしく、美しく！
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
-お覚悟はよろしくて？`,
-	}
+お覚悟はよろしくて？`
 
 	g.dressup_keys = []DressupKey{TransformMermaid}
 
@@ -141,14 +137,12 @@ func NewCureTwinkle() *Girl {
 	g.color = "yellow"
 	g.created_date = "2015-02-22"
 
-	g.transform_messages = map[string]string{
-		"normal": `プリキュア！プリンセスエンゲージ！
+	g.transform_message = `プリキュア！プリンセスエンゲージ！
 きらめく星のプリンセス！キュアトゥインクル！
 強く、やさしく、美しく！
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
-お覚悟はよろしくて？`,
-	}
+お覚悟はよろしくて？`
 
 	g.dressup_keys = []DressupKey{TransformTwinkle}
 
@@ -164,14 +158,12 @@ func NewCureScarlett() *Girl {
 	g.color = "red"
 	g.created_date = "2015-07-05"
 
-	g.transform_messages = map[string]string{
-		"normal": `プリキュア！プリンセスエンゲージ！
+	g.transform_message = `プリキュア！プリンセスエンゲージ！
 深紅の炎のプリンセス！キュアスカーレット！
 強く、やさしく、美しく！
 Go!プリンセスプリキュア！
 冷たい檻に閉ざされた夢、返していただきますわ！
-お覚悟決めなさい！`,
-	}
+お覚悟決めなさい！`
 
 	g.dressup_keys = []DressupKey{TransformScarlett}
 
