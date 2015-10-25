@@ -6,56 +6,56 @@ import (
 )
 
 func TestTransform(t *testing.T) {
-	flora := newCureFlora()
+	flora := NewCureFlora()
 	flora.transform_interval = 0
 
-	if flora.name() != "春野はるか" {
-		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	if flora.Name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
 	}
 
-	flora.transform()
+	flora.Transform()
 
-	if flora.name() != "キュアフローラ" {
-		t.Errorf("actual=%s, expect=%s", flora.name(), "キュアフローラ")
+	if flora.Name() != "キュアフローラ" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "キュアフローラ")
 	}
 
-	flora.transform()
+	flora.Transform()
 
-	if flora.name() != "春野はるか" {
-		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	if flora.Name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
 	}
 }
 
 func TestHumanize(t *testing.T) {
-	flora := newCureFlora()
+	flora := NewCureFlora()
 	flora.transform_interval = 0
 
-	flora.humanize()
+	flora.Humanize()
 
-	if flora.name() != "春野はるか" {
-		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	if flora.Name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
 	}
 
-	flora.transform()
+	flora.Transform()
 
-	flora.humanize()
+	flora.Humanize()
 
-	if flora.name() != "春野はるか" {
-		t.Errorf("actual=%s, expect=%s", flora.name(), "春野はるか")
+	if flora.Name() != "春野はるか" {
+		t.Errorf("actual=%s, expect=%s", flora.Name(), "春野はるか")
 	}
 }
 
 func ExampleCureFlora() {
-	flora := newCureFlora()
+	flora := NewCureFlora()
 	flora.transform_interval = 0
 
 	// human
-	fmt.Println(flora.name())
+	fmt.Println(flora.Name())
 
-	flora.transform()
+	flora.Transform()
 
 	// precure
-	fmt.Println(flora.name())
+	fmt.Println(flora.Name())
 
 	// Output:
 	// 春野はるか
@@ -69,16 +69,16 @@ func ExampleCureFlora() {
 }
 
 func ExampleCureMermaid() {
-	mermaid := newCureMermaid()
+	mermaid := NewCureMermaid()
 	mermaid.transform_interval = 0
 
 	// human
-	fmt.Println(mermaid.name())
+	fmt.Println(mermaid.Name())
 
-	mermaid.transform()
+	mermaid.Transform()
 
 	// precure
-	fmt.Println(mermaid.name())
+	fmt.Println(mermaid.Name())
 
 	// Output:
 	// 海藤みなみ
@@ -92,16 +92,16 @@ func ExampleCureMermaid() {
 }
 
 func ExampleCureTwinkle() {
-	twinkle := newCureTwinkle()
+	twinkle := NewCureTwinkle()
 	twinkle.transform_interval = 0
 
 	// human
-	fmt.Println(twinkle.name())
+	fmt.Println(twinkle.Name())
 
-	twinkle.transform()
+	twinkle.Transform()
 
 	// precure
-	fmt.Println(twinkle.name())
+	fmt.Println(twinkle.Name())
 
 	// Output:
 	// 天ノ川きらら
@@ -115,16 +115,16 @@ func ExampleCureTwinkle() {
 }
 
 func ExampleCureScarlett() {
-	scarlett := newCureScarlett()
+	scarlett := NewCureScarlett()
 	scarlett.transform_interval = 0
 
 	// human
-	fmt.Println(scarlett.name())
+	fmt.Println(scarlett.Name())
 
-	scarlett.transform()
+	scarlett.Transform()
 
 	// precure
-	fmt.Println(scarlett.name())
+	fmt.Println(scarlett.Name())
 
 	// Output:
 	// 紅城トワ
@@ -138,24 +138,24 @@ func ExampleCureScarlett() {
 }
 
 func TestExchange(t *testing.T) {
-	flora := newCureFlora()
+	flora := NewCureFlora()
 	flora.transform_interval = 0
 
-	flora.transform()
+	flora.Transform()
 
-	flora.exchange(TransformFlora)
+	flora.Exchange(TransformFlora)
 }
 
 func TestCanUseKey(t *testing.T) {
-	flora := newCureFlora()
+	flora := NewCureFlora()
 
-	actual := flora.canUseKey(TransformFlora)
+	actual := flora.CanUseKey(TransformFlora)
 
 	if !actual {
 		t.Errorf("expect flora.canUseKey(TransformFlora) == true")
 	}
 
-	actual = flora.canUseKey(TransformMermaid)
+	actual = flora.CanUseKey(TransformMermaid)
 
 	if actual {
 		t.Errorf("expect flora.canUseKey(TransformMermaid) == false")

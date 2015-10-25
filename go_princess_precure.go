@@ -53,7 +53,7 @@ type Girl struct {
 	dressup_keys       []DressupKey
 }
 
-func (g *Girl) name() string {
+func (g *Girl) Name() string {
 	switch g.current_state {
 	case 0:
 		return g.human_name
@@ -63,7 +63,7 @@ func (g *Girl) name() string {
 	return g.human_name
 }
 
-func (g *Girl) transform() {
+func (g *Girl) Transform() {
 	g.printByLine(g.transform_messages["normal"])
 
 	g.current_state++
@@ -81,16 +81,16 @@ func (g *Girl) printByLine(message string) {
 	}
 }
 
-func (g *Girl) humanize() {
+func (g *Girl) Humanize() {
 	g.current_state = 0
 }
 
-func (g *Girl) exchange(k DressupKey) {
+func (g *Girl) Exchange(k DressupKey) {
 	if g.current_state == 0 {
 		panic("Human can not exchange!")
 	}
 
-	if !g.canUseKey(k) {
+	if !g.CanUseKey(k) {
 		panic(g.precure_name + " can not use " + k.String())
 	}
 
@@ -100,7 +100,7 @@ func (g *Girl) exchange(k DressupKey) {
 	g.printByLine(message)
 }
 
-func (g *Girl) canUseKey(k DressupKey) bool {
+func (g *Girl) CanUseKey(k DressupKey) bool {
 	for _, value := range g.dressup_keys {
 		if value == k {
 			return true
@@ -116,7 +116,7 @@ func newGirl() *Girl {
 	return g
 }
 
-func newCureFlora() *Girl {
+func NewCureFlora() *Girl {
 	g := newGirl()
 	g.girl_name = "cure_flora"
 	g.human_name = "春野はるか"
@@ -139,7 +139,7 @@ Go!プリンセスプリキュア！
 	return g
 }
 
-func newCureMermaid() *Girl {
+func NewCureMermaid() *Girl {
 	g := newGirl()
 	g.girl_name = "cure_mermaid"
 	g.human_name = "海藤みなみ"
@@ -162,7 +162,7 @@ Go!プリンセスプリキュア！
 	return g
 }
 
-func newCureTwinkle() *Girl {
+func NewCureTwinkle() *Girl {
 	g := newGirl()
 	g.girl_name = "cure_twinkle"
 	g.human_name = "天ノ川きらら"
@@ -185,7 +185,7 @@ Go!プリンセスプリキュア！
 	return g
 }
 
-func newCureScarlett() *Girl {
+func NewCureScarlett() *Girl {
 	g := newGirl()
 	g.girl_name = "cure_scarlett"
 	g.human_name = "紅城トワ"
