@@ -1,12 +1,13 @@
 # GoPrincessPrecure
+This is golang implementation of [Go! Princess PreCure](https://en.wikipedia.org/wiki/Go!_Princess_PreCure)
 
 ## Install
-```
+```sh
 $ go get github.com/sue445/go_princess_precure
 ```
 
 ## Usage
-via .[gore](https://github.com/motemen/gore)
+via. [gore](https://github.com/motemen/gore)
 
 ```go
 gore> :import github.com/sue445/go_princess_precure
@@ -46,3 +47,6 @@ $ gom install
 $ export GOPATH="`pwd`/_vendor":$GOPATH
 $ _vendor/bin/gore
 ```
+
+## License
+MIT
