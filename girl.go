@@ -1,4 +1,4 @@
-package go_princess_precure
+package goprecure
 
 import (
 	"errors"

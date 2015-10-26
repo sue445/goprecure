@@ -1,17 +1,17 @@
-# GoPrincessPrecure
-This is golang implementation of [Go! Princess PreCure](https://en.wikipedia.org/wiki/Go!_Princess_PreCure)
+# GoPrecure
+goprecure is golang implementation of [Go! Princess PreCure](https://en.wikipedia.org/wiki/Go!_Princess_PreCure)
 
 ## Install
 ```sh
-$ go get github.com/sue445/go_princess_precure
+$ go get github.com/sue445/goprecure
 ```
 
 ## Usage
 via. [gore](https://github.com/motemen/gore)
 
 ```go
-gore> :import github.com/sue445/go_princess_precure
-gore> flora := go_princess_precure.NewCureFlora()
+gore> :import github.com/sue445/goprecure
+gore> flora := goprecure.NewCureFlora()
 gore> flora.Name()
 "春野はるか"
 
@@ -26,7 +26,7 @@ Go!プリンセスプリキュア！
 gore> flora.Name()
 "キュアフローラ"
 
-gore> flora.Exchange(go_princess_precure.TransformFlora)
+gore> flora.Exchange(goprecure.TransformFlora)
 エクスチェンジ！モードエレガント！
 舞え、花よ！プリキュア・フローラル・トルビヨン！
 ごきげんよう
