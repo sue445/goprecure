@@ -16,8 +16,8 @@ func ExampleCureFlora() {
 	// precure
 	fmt.Println("Name", flora.Name())
 
-	fmt.Println(TransformFlora.String())
-	flora.Exchange(TransformFlora)
+	fmt.Println(Flora.String())
+	flora.Exchange(Flora)
 
 	fmt.Println(Rose.String())
 	flora.Exchange(Rose)
@@ -25,8 +25,8 @@ func ExampleCureFlora() {
 	fmt.Println(Lily.String())
 	flora.Exchange(Lily)
 
-	fmt.Println(Blossom.String())
-	flora.Exchange(Blossom)
+	fmt.Println(Sakura.String())
+	flora.Exchange(Sakura)
 
 	// Output:
 	// Name 春野はるか
@@ -37,7 +37,7 @@ func ExampleCureFlora() {
 	// 冷たい檻に閉ざされた夢、返していただきますわ！
 	// お覚悟はよろしくて？
 	// Name キュアフローラ
-	// TransformFlora
+	// Flora
 	// エクスチェンジ！モードエレガント！
 	// 舞え、花よ！プリキュア・フローラル・トルビヨン！
 	// ごきげんよう
@@ -49,7 +49,7 @@ func ExampleCureFlora() {
 	// リリィ！
 	// 舞え、百合よ！プリキュア・リース・トルビヨン！
 	// ごきげんよう
-	// Blossom
+	// Sakura
 	// モードエレガント！
 	// 桜！珊瑚！銀河！サン！
 	// ドレスアッププレミアム！

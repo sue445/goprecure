@@ -16,8 +16,8 @@ func ExampleCureMermaid() {
 	// precure
 	fmt.Println("Name", mermaid.Name())
 
-	fmt.Println(TransformMermaid.String())
-	mermaid.Exchange(TransformMermaid)
+	fmt.Println(Mermaid.String())
+	mermaid.Exchange(Mermaid)
 
 	fmt.Println(Ice.String())
 	mermaid.Exchange(Ice)
@@ -25,8 +25,8 @@ func ExampleCureMermaid() {
 	fmt.Println(Bobble.String())
 	mermaid.Exchange(Bobble)
 
-	fmt.Println(Coral.String())
-	mermaid.Exchange(Coral)
+	fmt.Println(Sango.String())
+	mermaid.Exchange(Sango)
 
 	// Output:
 	// Name 海藤みなみ
@@ -37,7 +37,7 @@ func ExampleCureMermaid() {
 	// 冷たい檻に閉ざされた夢、返していただきますわ！
 	// お覚悟はよろしくて？
 	// Name キュアマーメイド
-	// TransformMermaid
+	// Mermaid
 	// エクスチェンジ！モードエレガント！
 	// 高鳴れ、海よ！プリキュア・マーメイド・リップル！
 	// ごきげんよう
@@ -49,7 +49,7 @@ func ExampleCureMermaid() {
 	// バブル！
 	// 高まれ、泡よ！プリキュア・バブルリップル！
 	// ごきげんよう
-	// Coral
+	// Sango
 	// モードエレガント！
 	// 桜！珊瑚！銀河！サン！
 	// ドレスアッププレミアム！

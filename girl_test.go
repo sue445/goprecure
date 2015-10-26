@@ -116,13 +116,13 @@ func TestExchange(t *testing.T) {
 
 	flora.Transform()
 
-	flora.Exchange(TransformFlora)
+	flora.Exchange(Flora)
 }
 
 func ExampleGirl_Exchange_human() {
 	flora := NewCureFlora()
 
-	_, err := flora.Exchange(TransformFlora)
+	_, err := flora.Exchange(Flora)
 	fmt.Println(err)
 
 	// Output:
@@ -137,7 +137,7 @@ func ExampleGirl_Exchange_precure() {
 	flora.Transform()
 
 	flora.PrintLine = true
-	flora.Exchange(TransformFlora)
+	flora.Exchange(Flora)
 
 	// Output:
 	// エクスチェンジ！モードエレガント！
@@ -152,41 +152,41 @@ func ExampleGirl_Exchange_invalidDressupKey() {
 
 	flora.Transform()
 
-	_, err := flora.Exchange(TransformMermaid)
+	_, err := flora.Exchange(Mermaid)
 	fmt.Println(err)
 
 	// Output:
-	// キュアフローラ can not use TransformMermaid
+	// キュアフローラ can not use Mermaid
 }
 
 func TestCanUseKey(t *testing.T) {
 	flora := NewCureFlora()
 
-	actual := flora.CanUseKey(TransformFlora)
+	actual := flora.CanUseKey(Flora)
 
 	if !actual {
-		t.Errorf("expect flora.canUseKey(TransformFlora) == true")
+		t.Errorf("expect flora.canUseKey(Flora) == true")
 	}
 
-	actual = flora.CanUseKey(TransformMermaid)
+	actual = flora.CanUseKey(Mermaid)
 
 	if actual {
-		t.Errorf("expect flora.canUseKey(TransformMermaid) == false")
+		t.Errorf("expect flora.canUseKey(Mermaid) == false")
 	}
 }
 
 func ExampleGirl_CanUseKey() {
 	flora := NewCureFlora()
 
-	ret1 := flora.CanUseKey(TransformFlora)
-	fmt.Println("flora can use TransformFlora ?:", ret1)
+	ret1 := flora.CanUseKey(Flora)
+	fmt.Println("flora can use Flora ?:", ret1)
 
-	ret2 := flora.CanUseKey(TransformMermaid)
-	fmt.Println("flora can use TransformMermaid ?:", ret2)
+	ret2 := flora.CanUseKey(Mermaid)
+	fmt.Println("flora can use Mermaid ?:", ret2)
 
 	// Output:
-	// flora can use TransformFlora ?: true
-	// flora can use TransformMermaid ?: false
+	// flora can use Flora ?: true
+	// flora can use Mermaid ?: false
 }
 
 func ExampleNewCureFlora() {
@@ -205,7 +205,7 @@ func ExampleNewCureFlora() {
 	// CastName 嶋村侑
 	// Color pink
 	// CreatedDate 2015-02-01
-	// DressupKeys [TransformFlora Rose Lily Blossom]
+	// DressupKeys [Flora Rose Lily Sakura]
 }
 
 func ExampleNewCureMermaid() {
@@ -224,7 +224,7 @@ func ExampleNewCureMermaid() {
 	// CastName 浅野真澄
 	// Color blue
 	// CreatedDate 2015-02-08
-	// DressupKeys [TransformMermaid Ice Bobble Coral]
+	// DressupKeys [Mermaid Ice Bobble Sango]
 }
 
 func ExampleNewCureTwinkle() {
@@ -243,7 +243,7 @@ func ExampleNewCureTwinkle() {
 	// CastName 山村響
 	// Color yellow
 	// CreatedDate 2015-02-22
-	// DressupKeys [TransformTwinkle Luna ShootingStar Galaxy]
+	// DressupKeys [Twinkle Luna ShootingStar Ginga]
 }
 
 func ExampleNewCureScarlett() {
@@ -262,5 +262,5 @@ func ExampleNewCureScarlett() {
 	// CastName 沢城みゆき
 	// Color red
 	// CreatedDate 2015-07-05
-	// DressupKeys [TransformScarlett Fireworks Phoenix Sun]
+	// DressupKeys [Scarlett Hanabi Phoenix Sun]
 }

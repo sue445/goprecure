@@ -16,11 +16,11 @@ func ExampleCureScarlett() {
 	// precure
 	fmt.Println("Name", scarlett.Name())
 
-	fmt.Println(TransformScarlett.String())
-	scarlett.Exchange(TransformScarlett)
+	fmt.Println(Scarlett.String())
+	scarlett.Exchange(Scarlett)
 
-	fmt.Println(Fireworks.String())
-	scarlett.Exchange(Fireworks)
+	fmt.Println(Hanabi.String())
+	scarlett.Exchange(Hanabi)
 
 	fmt.Println(Phoenix.String())
 	scarlett.Exchange(Phoenix)
@@ -37,11 +37,11 @@ func ExampleCureScarlett() {
 	// 冷たい檻に閉ざされた夢、返していただきますわ！
 	// お覚悟決めなさい！
 	// Name キュアスカーレット
-	// TransformScarlett
+	// Scarlett
 	// エクスチェンジ！モードエレガント！
 	// たぎれ、炎よ！プリキュア・スカーレット・フレイム！
 	// ごきげんよう
-	// Fireworks
+	// Hanabi
 	// 花火！
 	// 燃えよ、炎よ！プリキュア・スカーレット・スパーク！
 	// ごきげんよう

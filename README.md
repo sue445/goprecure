@@ -26,10 +26,16 @@ Go!プリンセスプリキュア！
 gore> flora.Name()
 "キュアフローラ"
 
-gore> flora.Exchange(goprecure.TransformFlora)
+gore> flora.Exchange(goprecure.Flora)
 エクスチェンジ！モードエレガント！
 舞え、花よ！プリキュア・フローラル・トルビヨン！
 ごきげんよう
+
+gore> ret, err = flora.Exchange(goprecure.Mermaid)
+gore> err
+&errors.errorString{
+  s: "キュアフローラ can not use Mermaid",
+}
 ```
 
 ## More examples

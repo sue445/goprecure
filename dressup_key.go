@@ -7,42 +7,42 @@ import (
 type DressupKey int
 
 const (
-	TransformFlora    DressupKey = iota // 変身ドレスアップキー（キュアフローラ）
-	TransformMermaid                    // 変身ドレスアップキー（キュアマーメイド）
-	TransformTwinkle                    // 変身ドレスアップキー（キュアトゥインクル）
-	TransformScarlett                   // 変身ドレスアップキー（キュアスカーレット）
-	Rose                                // エレガントローズドレスアップキー
-	Ice                                 // エレガントアイスドレスアップキー
-	Luna                                // エレガントルナドレスアップキー
-	Fireworks                           // エレガントハナビドレスアップキー
-	Lily                                // ミラクルリリィドレスアップキー
-	Bobble                              // ミラクルバブルドレスアップキー
-	ShootingStar                        // ミラクルシューティングスタードレスアップキー
-	Phoenix                             // ミラクルフェニックスドレスアップキー
-	Blossom                             // プレミアムサクラドレスアップキー
-	Coral                               // プレミアムサンゴドレスアップキー
-	Galaxy                              // プレミアムギンガドレスアップキー
-	Sun                                 // プレミアムサンドレスアップキー
+	Flora DressupKey = iota
+	Mermaid
+	Twinkle
+	Scarlett
+	Rose
+	Ice
+	Luna
+	Hanabi // Fireworks
+	Lily
+	Bobble
+	ShootingStar
+	Phoenix
+	Sakura // Cherry Blossom
+	Sango  // Coral
+	Ginga  // Galaxy
+	Sun
 )
 
 func exchangeMessage(k DressupKey) string {
 	switch k {
-	case TransformFlora:
+	case Flora:
 		return `エクスチェンジ！モードエレガント！
 舞え、花よ！プリキュア・フローラル・トルビヨン！
 ごきげんよう`
 
-	case TransformMermaid:
+	case Mermaid:
 		return `エクスチェンジ！モードエレガント！
 高鳴れ、海よ！プリキュア・マーメイド・リップル！
 ごきげんよう`
 
-	case TransformTwinkle:
+	case Twinkle:
 		return `エクスチェンジ！モードエレガント！
 キラキラ、星よ！プリキュア・トゥインクル・ハミング！
 ごきげんよう`
 
-	case TransformScarlett:
+	case Scarlett:
 		return `エクスチェンジ！モードエレガント！
 たぎれ、炎よ！プリキュア・スカーレット・フレイム！
 ごきげんよう`
@@ -62,7 +62,7 @@ func exchangeMessage(k DressupKey) string {
 キラキラ、月よ！プリキュア・フルムーン・ハミング！
 ごきげんよう`
 
-	case Fireworks:
+	case Hanabi:
 		return `花火！
 燃えよ、炎よ！プリキュア・スカーレット・スパーク！
 ごきげんよう`
@@ -87,11 +87,11 @@ func exchangeMessage(k DressupKey) string {
 羽ばたけ炎の翼！プリキュア・フェニックス・ブレイズ！
 ごきげんよう`
 
-	case Blossom:
+	case Sakura:
 		fallthrough
-	case Coral:
+	case Sango:
 		fallthrough
-	case Galaxy:
+	case Ginga:
 		fallthrough
 	case Sun:
 		return `モードエレガント！
