@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func sleep()  {
+func sleep() {
 	time.Sleep(1 * time.Second)
 }
 
