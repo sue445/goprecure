@@ -38,6 +38,17 @@ gore> err
 }
 ```
 
+## Demo
+### Transform
+![flora_transform.gif](img/flora_transform.gif)
+
+[demo/flora_transform.go](demo/flora_transform.go)
+
+### Exchange
+![flora_exchange.gif](img/flora_exchange.gif)
+
+[demo/flora_exchange.go](demo/flora_exchange.go)
+
 ## More examples
 * [cure_flora_test.go](cure_flora_test.go)
 * [cure_mermaid_test.go](cure_mermaid_test.go)
