@@ -205,7 +205,7 @@ func ExampleNewCureFlora() {
 	// CastName 嶋村侑
 	// Color pink
 	// CreatedDate 2015-02-01
-	// DressupKeys [Flora Rose Lily Sakura]
+	// DressupKeys [Flora Rose Lily Sakura Royal]
 }
 
 func ExampleNewCureMermaid() {
@@ -224,7 +224,7 @@ func ExampleNewCureMermaid() {
 	// CastName 浅野真澄
 	// Color blue
 	// CreatedDate 2015-02-08
-	// DressupKeys [Mermaid Ice Bobble Sango]
+	// DressupKeys [Mermaid Ice Bobble Sango Royal]
 }
 
 func ExampleNewCureTwinkle() {
@@ -243,7 +243,7 @@ func ExampleNewCureTwinkle() {
 	// CastName 山村響
 	// Color yellow
 	// CreatedDate 2015-02-22
-	// DressupKeys [Twinkle Luna ShootingStar Ginga]
+	// DressupKeys [Twinkle Luna ShootingStar Ginga Royal]
 }
 
 func ExampleNewCureScarlett() {
@@ -262,5 +262,5 @@ func ExampleNewCureScarlett() {
 	// CastName 沢城みゆき
 	// Color red
 	// CreatedDate 2015-07-05
-	// DressupKeys [Scarlett Hanabi Phoenix Sun]
+	// DressupKeys [Scarlett Hanabi Phoenix Sun Royal]
 }
