@@ -23,6 +23,7 @@ const (
 	Sango  // Coral
 	Ginga  // Galaxy
 	Sun
+	Royal
 )
 
 func exchangeMessage(k DressupKey) string {
@@ -99,6 +100,15 @@ func exchangeMessage(k DressupKey) string {
 ドレスアッププレミアム！
 はぁッ！
 響け全ての力！プリキュアエクラエスポワール！`
+
+	case Royal:
+		return `モードエレガント！ロイヤル！
+ドレスアップロイヤル！
+はぁっ！
+響け遥か彼方へ！プリキュアグランプランタン！
+ドリーミング
+ブルーミング
+ごきげんよう`
 	}
 
 	panic(fmt.Sprintf("Unknown DressUpKey: %d", k))

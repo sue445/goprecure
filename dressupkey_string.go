@@ -4,9 +4,9 @@ package goprecure
 
 import "fmt"
 
-const _DressupKey_name = "FloraMermaidTwinkleScarlettRoseIceLunaHanabiLilyBobbleShootingStarPhoenixSakuraSangoGingaSun"
+const _DressupKey_name = "FloraMermaidTwinkleScarlettRoseIceLunaHanabiLilyBobbleShootingStarPhoenixSakuraSangoGingaSunRoyal"
 
-var _DressupKey_index = [...]uint8{0, 5, 12, 19, 27, 31, 34, 38, 44, 48, 54, 66, 73, 79, 84, 89, 92}
+var _DressupKey_index = [...]uint8{0, 5, 12, 19, 27, 31, 34, 38, 44, 48, 54, 66, 73, 79, 84, 89, 92, 97}
 
 func (i DressupKey) String() string {
 	if i < 0 || i >= DressupKey(len(_DressupKey_index)-1) {
