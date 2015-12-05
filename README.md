@@ -2,6 +2,7 @@
 goprecure is golang implementation of [Go! Princess PreCure](https://en.wikipedia.org/wiki/Go!_Princess_PreCure)
 
 [![Build Status](https://travis-ci.org/sue445/goprecure.svg?branch=master)](https://travis-ci.org/sue445/goprecure)
+[![Coverage Status](https://coveralls.io/repos/sue445/goprecure/badge.svg?branch=master&service=github)](https://coveralls.io/github/sue445/goprecure?branch=master)
 
 ## Install
 ```sh
