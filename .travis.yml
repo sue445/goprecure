@@ -1,0 +1,15 @@
+language: go
+go:
+  - 1.4
+  - tip
+install:
+  - go get .
+script: go test
+
+branches:
+  only:
+    - master
+notifications:
+  email: false
+  slack:
+    secure: D0bfLR45NRBMyD4MAZfPENyfZvb8vBNRNHuwrOaP6vYDXhF1mMxASzkTiK6WmW/++oQCTb36RWUZMYVmOtAjYrsq/K55L7/bQSvdEiqn3ZRwIaRNVUo5r5VCq1iToxuem8ASOIKx6WZAlhSQdZziy8iaovVgXUGY2eZtn2dfBVThIK0LAfn8ewn/i/w0ghtkIaUPBvWUQ9ieWTMkRgziiHhyMY6ruXQmBPq2enUMOSNQifAJ3NnT7EUovQnSNVAMKm/AalHthRnGGRd/DDLaJqo/KS1ENLezydhPJYqiEZxV7OAYI6wKpTF7NWLoJOTz5UFkQCLAz+Yqu+HQzOHGoQZ4P3wQpVzeSwmN0dUfgXHSMm9iC24TOI160QY1XSCP1aNrESrPpmxNhZClC6epDZXurmyTOVGLLy9/zmJH6kN0OXEkLtTyYKXMbef5vhNKlDUCKopq588SHos9HvImtCBIsV2MJ4UWFx4JEe764f2MuBVlx+ARaeo/u9iBgXDjCjuplrz5XaI61FyCO6GYi863ssZc/9dhFjtmqIKIQ0ytWiYkcgy3KLH1ItPoGfJuf1Pdjv/jdbul7BcYvgyYhSpNvgij05H1klnrh+5EENotPrtRXbE9YTgJEV8U+vjYjJAvfbuZ28pvEvc+VK5TSH+VXS+7rKRllo84rCOlrLI=
