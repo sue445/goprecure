@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/sue445/goprecure/tree/HEAD)
-
-[Full Changelog](https://github.com/sue445/goprecure/compare/0.1.0...HEAD)
+## [0.1.1](https://github.com/sue445/goprecure/tree/0.1.1) (2015-12-07)
+[Full Changelog](https://github.com/sue445/goprecure/compare/0.1.0...0.1.1)
 
 **Merged pull requests:**
 
