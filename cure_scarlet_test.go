@@ -4,29 +4,29 @@ import (
 	"fmt"
 )
 
-func ExampleCureScarlett() {
-	scarlett := NewCureScarlett()
-	scarlett.PrintInterval = 0
+func ExampleCureScarlet() {
+	scarlet := NewCureScarlet()
+	scarlet.PrintInterval = 0
 
 	// human
-	fmt.Println("Name", scarlett.Name())
+	fmt.Println("Name", scarlet.Name())
 
-	scarlett.Transform()
+	scarlet.Transform()
 
 	// precure
-	fmt.Println("Name", scarlett.Name())
+	fmt.Println("Name", scarlet.Name())
 
-	fmt.Println(Scarlett.String())
-	scarlett.Exchange(Scarlett)
+	fmt.Println(Scarlet.String())
+	scarlet.Exchange(Scarlet)
 
 	fmt.Println(Hanabi.String())
-	scarlett.Exchange(Hanabi)
+	scarlet.Exchange(Hanabi)
 
 	fmt.Println(Phoenix.String())
-	scarlett.Exchange(Phoenix)
+	scarlet.Exchange(Phoenix)
 
 	fmt.Println(Sun.String())
-	scarlett.Exchange(Sun)
+	scarlet.Exchange(Sun)
 
 	// Output:
 	// Name 紅城トワ
@@ -37,7 +37,7 @@ func ExampleCureScarlett() {
 	// 冷たい檻に閉ざされた夢、返していただきますわ！
 	// お覚悟決めなさい！
 	// Name キュアスカーレット
-	// Scarlett
+	// Scarlet
 	// エクスチェンジ！モードエレガント！
 	// たぎれ、炎よ！プリキュア・スカーレット・フレイム！
 	// ごきげんよう

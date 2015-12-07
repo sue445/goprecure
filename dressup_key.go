@@ -10,13 +10,13 @@ const (
 	Flora DressupKey = iota
 	Mermaid
 	Twinkle
-	Scarlett
+	Scarlet
 	Rose
 	Ice
 	Luna
 	Hanabi // Fireworks
 	Lily
-	Bobble
+	Bubble
 	ShootingStar
 	Phoenix
 	Sakura // Cherry Blossom
@@ -43,7 +43,7 @@ func exchangeMessage(k DressupKey) string {
 キラキラ、星よ！プリキュア・トゥインクル・ハミング！
 ごきげんよう`
 
-	case Scarlett:
+	case Scarlet:
 		return `エクスチェンジ！モードエレガント！
 たぎれ、炎よ！プリキュア・スカーレット・フレイム！
 ごきげんよう`
@@ -73,7 +73,7 @@ func exchangeMessage(k DressupKey) string {
 舞え、百合よ！プリキュア・リース・トルビヨン！
 ごきげんよう`
 
-	case Bobble:
+	case Bubble:
 		return `バブル！
 高まれ、泡よ！プリキュア・バブルリップル！
 ごきげんよう`

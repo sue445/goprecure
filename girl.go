@@ -123,7 +123,7 @@ func NewCureMermaid() *Girl {
 	g.CastName = "浅野真澄"
 	g.Color = "blue"
 	g.CreatedDate = "2015-02-08"
-	g.DressupKeys = []DressupKey{Mermaid, Ice, Bobble, Sango, Royal}
+	g.DressupKeys = []DressupKey{Mermaid, Ice, Bubble, Sango, Royal}
 
 	g.TransformMessage = `プリキュア！プリンセスエンゲージ！
 澄み渡る海のプリンセス！キュアマーメイド！
@@ -154,14 +154,14 @@ Go!プリンセスプリキュア！
 	return g
 }
 
-func NewCureScarlett() *Girl {
+func NewCureScarlet() *Girl {
 	g := newGirl()
 	g.HumanName = "紅城トワ"
 	g.PrecureName = "キュアスカーレット"
 	g.CastName = "沢城みゆき"
 	g.Color = "red"
 	g.CreatedDate = "2015-07-05"
-	g.DressupKeys = []DressupKey{Scarlett, Hanabi, Phoenix, Sun, Royal}
+	g.DressupKeys = []DressupKey{Scarlet, Hanabi, Phoenix, Sun, Royal}
 
 	g.TransformMessage = `プリキュア！プリンセスエンゲージ！
 深紅の炎のプリンセス！キュアスカーレット！

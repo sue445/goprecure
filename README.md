@@ -56,7 +56,7 @@ gore> err
 * [cure_flora_test.go](cure_flora_test.go)
 * [cure_mermaid_test.go](cure_mermaid_test.go)
 * [cure_twinkle_test.go](cure_twinkle_test.go)
-* [cure_scarlett_test.go](cure_scarlett_test.go)
+* [cure_scarlet_test.go](cure_scarlet_test.go)
 
 ## Development
 

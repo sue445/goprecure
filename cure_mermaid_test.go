@@ -22,8 +22,8 @@ func ExampleCureMermaid() {
 	fmt.Println(Ice.String())
 	mermaid.Exchange(Ice)
 
-	fmt.Println(Bobble.String())
-	mermaid.Exchange(Bobble)
+	fmt.Println(Bubble.String())
+	mermaid.Exchange(Bubble)
 
 	fmt.Println(Sango.String())
 	mermaid.Exchange(Sango)
@@ -45,7 +45,7 @@ func ExampleCureMermaid() {
 	// アイス！
 	// 高鳴れ、氷よ！プリキュア・フローズン・リップル！
 	// ごきげんよう
-	// Bobble
+	// Bubble
 	// バブル！
 	// 高まれ、泡よ！プリキュア・バブルリップル！
 	// ごきげんよう
