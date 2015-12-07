@@ -1,8 +1,10 @@
 language: go
 go:
   - 1.4
+  - 1.5
   - tip
 before_install:
+  # goveralls
   - go get github.com/axw/gocov/gocov
   - go get github.com/mattn/goveralls
   - if ! go get github.com/golang/tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
@@ -10,7 +12,16 @@ install:
   - go get .
 script:
   - go test
+
+  # go vet
+  - go tool vet -all .
+
+  # goveralls
   - $HOME/gopath/bin/goveralls -service=travis-ci
+
+matrix:
+  allow_failures:
+  - go: tip
 
 branches:
   only:
