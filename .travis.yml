@@ -10,6 +10,7 @@ install:
   - go get .
 script:
   - go test
+  - go tool vet -all .
   - $HOME/gopath/bin/goveralls -service=travis-ci
 
 branches:
