@@ -16,7 +16,7 @@ const (
 	Luna
 	Hanabi // Fireworks
 	Lily
-	Bobble
+	Bubble
 	ShootingStar
 	Phoenix
 	Sakura // Cherry Blossom
@@ -73,7 +73,7 @@ func exchangeMessage(k DressupKey) string {
 舞え、百合よ！プリキュア・リース・トルビヨン！
 ごきげんよう`
 
-	case Bobble:
+	case Bubble:
 		return `バブル！
 高まれ、泡よ！プリキュア・バブルリップル！
 ごきげんよう`

@@ -224,7 +224,7 @@ func ExampleNewCureMermaid() {
 	// CastName 浅野真澄
 	// Color blue
 	// CreatedDate 2015-02-08
-	// DressupKeys [Mermaid Ice Bobble Sango Royal]
+	// DressupKeys [Mermaid Ice Bubble Sango Royal]
 }
 
 func ExampleNewCureTwinkle() {

@@ -4,7 +4,7 @@ package goprecure
 
 import "fmt"
 
-const _DressupKey_name = "FloraMermaidTwinkleScarlettRoseIceLunaHanabiLilyBobbleShootingStarPhoenixSakuraSangoGingaSunRoyal"
+const _DressupKey_name = "FloraMermaidTwinkleScarlettRoseIceLunaHanabiLilyBubbleShootingStarPhoenixSakuraSangoGingaSunRoyal"
 
 var _DressupKey_index = [...]uint8{0, 5, 12, 19, 27, 31, 34, 38, 44, 48, 54, 66, 73, 79, 84, 89, 92, 97}
 

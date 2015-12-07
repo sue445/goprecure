@@ -123,7 +123,7 @@ func NewCureMermaid() *Girl {
 	g.CastName = "浅野真澄"
 	g.Color = "blue"
 	g.CreatedDate = "2015-02-08"
-	g.DressupKeys = []DressupKey{Mermaid, Ice, Bobble, Sango, Royal}
+	g.DressupKeys = []DressupKey{Mermaid, Ice, Bubble, Sango, Royal}
 
 	g.TransformMessage = `プリキュア！プリンセスエンゲージ！
 澄み渡る海のプリンセス！キュアマーメイド！
