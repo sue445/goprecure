@@ -246,8 +246,8 @@ func ExampleNewCureTwinkle() {
 	// DressupKeys [Twinkle Luna ShootingStar Ginga Royal]
 }
 
-func ExampleNewCureScarlett() {
-	scarlett := NewCureScarlett()
+func ExampleNewCureScarlet() {
+	scarlett := NewCureScarlet()
 
 	fmt.Println("HumanName", scarlett.HumanName)
 	fmt.Println("PrecureName", scarlett.PrecureName)
@@ -262,5 +262,5 @@ func ExampleNewCureScarlett() {
 	// CastName 沢城みゆき
 	// Color red
 	// CreatedDate 2015-07-05
-	// DressupKeys [Scarlett Hanabi Phoenix Sun Royal]
+	// DressupKeys [Scarlet Hanabi Phoenix Sun Royal]
 }
