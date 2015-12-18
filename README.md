@@ -70,3 +70,7 @@ $ _vendor/bin/gore
 
 ## License
 MIT
+
+## Presentations / Articles
+### in Japanese
+* [GoがGoでGo!プリンセスプリキュアを作った #gocon #cure_advent - くりにっき](http://sue445.hatenablog.com/entry/2015/12/07/000000)  ([slide ver](https://sue445.github.io/gocon2015-winter/))
